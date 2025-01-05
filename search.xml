@@ -454,39 +454,6 @@
       </tags>
   </entry>
   <entry>
-    <title>阿柔的汇编语言札记-0 学习环境配置</title>
-    <url>/2024/08/09/asm-0/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>既然中考已经结束了，在漫长的暑假中总得有些事情做吧。于是，就盯上了王爽老师的《汇编语言》。作为初出茅庐的计算机新人(误)，想必都曾有过自己开发一款操作系统的想法。不过操作系统底层的东西自然是离不开汇编语言的。而汇编语言作为机器语言与高级语言之间的过渡，在如今被使用的频率已经大不如前了，几乎要被C语言淘汰了的说。</p>
-<p>「总得有人学学这些东西。」<br>于是，我翻开了这本书。</p>
-<h1 id="DOSBox"><a href="#DOSBox" class="headerlink" title="DOSBox"></a>DOSBox</h1><p>闲话少说，在正式开始汇编语言学习之前，要先把汇编语言学习的环境准备一下。<br>首先我们需要准备的是<strong>DOSBox</strong>，一个非常好用的DOS模拟器，想必很多人都用这个模拟器玩过一些上世纪的DOS游戏，比如<strong>金庸群侠传</strong>什么的，不过和新世纪出生的我并没有什么关系就是啦。<br>关于DOSBox的文件可以去官网<a href="https://www.dosbox.com/download.php?main=1">https://www.dosbox.com/download.php?main=1</a>下载，也可以在<a href="https://github.com/HiedanoAjuu/Ajuu-s-repository">阿柔的小图书馆的小储藏间</a>下载，不得不说Github作为网盘还是挺好用的(?)<br>下载完后就可以正常进行安装了，一路点下一步即可。如果安装好后是下面这样的界面那就没什么大问题了。<br><img src="dosbox.png" alt="DOSBox" title="DOSBox"></p>
-<h1 id="MASM六件套"><a href="#MASM六件套" class="headerlink" title="MASM六件套"></a>MASM六件套</h1><p>接下来可以到<a href="https://github.com/HiedanoAjuu/Ajuu-s-repository">阿柔的小图书馆的小储藏间</a>下载<strong>MASM</strong>六件套了，这是由微软开发的汇编语言开发套件，解压完后回到DOSBox的根目录，找到一个名为<code>DOSBox 0.74 Options.bat</code>的批处理文件并运行，在打开的<code>dosbox-0.74.conf</code>配置文件中找到<code>[autoexec]</code>部分，并且在该部分添加以下命令：</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">mount (盘符) (你的MASM解压目录)</span><br><span class="line">(盘符):</span><br></pre></td></tr></table></figure>
-<p>在每次启动DOSBox时，<code>[autoexec]</code>部分的命令都会被自动执行，我们这里添加的命令意思是<strong>将MASM所在的目录挂载为指定的盘符，并切换到该目录下</strong>，便于我们后续利用这些工具进行学习与开发。<br>至于为什么是MASM……嗯，因为DOSBox是<strong>MS-DOS</strong>的模拟器。</p>
-<p>那么这六件套分别是什么东西呢?又该怎么使用呢?</p>
-<p>六件套分别有以下几个文件：</p>
-<ul>
-<li><code>debug.exe</code>:用来调试程序，便于我们监控程序的运行状况和CPU各寄存器的数据。</li>
-<li><code>edit.exe</code>:文本编辑器，用来写汇编代码的，不过为什么不用物理机操作系统上的代码编辑器来写(?)</li>
-<li><code>exe2bin.exe</code>:将<code>.exe</code>程序转换成内存映像(也就是二进制形式)。</li>
-<li><code>lib.exe</code>:库管理程序。</li>
-<li><code>link.exe</code>:链接器，将<code>masm.exe</code>编译生成的<code>.obj</code>对象文件与库链接起来创建<code>.exe</code>可执行文件或<code>.dll</code>动态链接库文件。</li>
-<li><code>masm.exe</code>:编译器，将<code>.asm</code>汇编语言文件编译生成<code>.obj</code>对象文件。</li>
-</ul>
-<p>具体的用法等以后需要用到的时候再详细进行讲解，汇编语言学习与开发环境的配置到此便告一段落了，怎么样，是不是感觉已经有了些许成就感?但这对于学习汇编语言不过是第0步罢了。</p>
-<p>该死，怎么感觉写得像营销号洗稿的软文一样(?)</p>
-]]></content>
-      <categories>
-        <category>计算机</category>
-        <category>编程</category>
-        <category>汇编语言</category>
-      </categories>
-      <tags>
-        <tag>计算机</tag>
-        <tag>编程</tag>
-        <tag>汇编语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>平假名寻根——草书书法中的“平假名”</title>
     <url>/2024/08/10/hiragana-in-chinese/</url>
     <content><![CDATA[<p>平假名想必各位都很熟悉了。平假名是日语使用的一种表音文字，最初是为了写物语与和歌而用。平假名来源于汉字的草书，那么在汉字草书书法作品中，或许就能找到日语平假名的源头吧。下面我们就来看看一些日语片假名的来源。虽说有部分平假名与汉字之间的联系过于抽象，但基本上都还是能在书法作品中找到原型的。</p>
@@ -638,12 +605,12 @@
 <center>[明]王铎 《临唐太宗帖》 “無(无)”</center>
 
 <h1 id="一些统计"><a href="#一些统计" class="headerlink" title="一些统计"></a>一些统计</h1>
-    <div id="echarts9600" style="width: 85%;height: 400px;margin: 0 auto"></div>
+    <div id="echarts9859" style="width: 85%;height: 400px;margin: 0 auto"></div>
     <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
 
     <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
-            var myChart = echarts.init(document.getElementById('echarts9600'));
+            var myChart = echarts.init(document.getElementById('echarts9859'));
             // 指定图表的配置项和数据
             var option = {
     title: {
@@ -668,12 +635,12 @@
     </script>
     
 
-    <div id="echarts8783" style="width: 85%;height: 400px;margin: 0 auto"></div>
+    <div id="echarts9118" style="width: 85%;height: 400px;margin: 0 auto"></div>
     <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
 
     <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
-            var myChart = echarts.init(document.getElementById('echarts8783'));
+            var myChart = echarts.init(document.getElementById('echarts9118'));
             // 指定图表的配置项和数据
             var option = {
     title: {
@@ -706,6 +673,283 @@
         <tag>书法</tag>
         <tag>文化</tag>
         <tag>日语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>曼涅托 埃及史(24-10-26)</title>
+    <url>/2024/10/07/manetho/</url>
+    <content><![CDATA[<h1 id="第一卷"><a href="#第一卷" class="headerlink" title="第一卷"></a>第一卷</h1><h2 id="1-（来自亚美尼亚语版《尤西比乌斯编年史》）"><a href="#1-（来自亚美尼亚语版《尤西比乌斯编年史》）" class="headerlink" title="1 （来自亚美尼亚语版《尤西比乌斯编年史》）"></a>1 （来自亚美尼亚语版《尤西比乌斯编年史》）</h2><p>神王朝、半神朝与亡灵朝。<br>摘自曼涅托《埃及史》，他将他对埃及历史的记叙写成这三卷书。从神明、半神、亡灵，以及统治埃及的人王朝，直到波斯国王大流士。</p>
+<ol>
+<li><p>埃及的第一个人(或者神)是赫菲斯托斯<sup><a href="#fn_1" id="reffn_1">1</a></sup>，在埃及人中也因发现火而闻名。他的儿子赫利俄斯(太阳神)由索西斯继承；然后依次是克洛诺斯、奥西里斯、奥西里斯的弟弟提丰，最后是奥西里斯和伊西斯的儿子奥鲁斯。他们是埃及的第一批统治者。此后，王位由上一个人传给下一个人，这样的继承持续了13,900年而未有中断，直到比迪斯(比特斯)<sup><a href="#fn_2" id="reffn_2">2</a></sup>。然而，这里的“年”我认为是阴历年，也就是说，每年只有30天：如今我们所说的“月”以前被埃及人称作“年”。<sup><a href="#fn_3" id="reffn_3">3</a></sup></p>
+</li>
+<li><p>众神之后，半神统治了1255年，<sup><a href="#fn_4" id="reffn_4">4</a></sup>另一列国王又统治了1817年；之后又出了三十位孟斐斯的国王，<sup><a href="#fn_5" id="reffn_5">5</a></sup>他们统治了1790年。接下来又有十位国王，统治了350年。</p>
+</li>
+<li><p>亡灵与半神<sup><a href="#fn_6" id="reffn_6">6</a></sup>的统治又再延续了5813年。</p>
+</li>
+<li><p>[上述的五个王朝的]统治共计11,000年，<sup><a href="#fn_7" id="reffn_7">7</a></sup>然而这些都是阴历年，也就是月。但是，事实上埃及人所述的整个的统治——神王朝、半神朝和亡灵朝——据估算共包括24,900个阴历年，即2206<sup><a href="#fn_8" id="reffn_8">8</a></sup>个阳历年。</p>
+</li>
+<li><p>现在，如果你愿意将这些数字与希伯来人的年表进行比对，你会发现它们是完美和谐的。希伯来人称埃及为“梅斯特拉伊姆”<sup><a href="#fn_9" id="reffn_9">9</a></sup>；而且梅斯特拉伊姆诞生在大洪水后不久，因为，诺亚的儿子占（或者含），在他们的宗族以这样那样的方式分散时，生下了埃古普托斯，也即梅斯特拉伊姆，第一个着手在埃及定居的人。根据希伯来人的记述，从亚当到大洪水，总计2242年。</p>
+</li>
+<li><p>但是，由于埃及人根据他们历史悠久的王权宣称，在大洪水之前，还有一列神明、半神和亡灵，统治了埃及超过20,000年，显然，这年数如果当作月来算，和希伯来人记载的年数应该是一样的：也就是说，希伯来人记录的年数中所包含的月数应该等于埃及人记录的阴历年数，与从人类最初被创造直到梅斯特拉伊姆估算的总时长一致。梅斯特拉伊姆确是埃及族人的始祖；而埃及的第一个王朝应当是起源于他。</p>
+</li>
+<li><p>但是如果年数还是过多，我们必须假定可能同时有数位埃及国王进行统治；因为他们说这些统治者同时是底比斯、孟斐斯、塞易斯、埃塞俄比亚<sup><a href="#fn_*" id="reffn_*">*</a></sup>和其他地方的国王。此外，似乎有不同的国王统治着不同的地区，每个王朝的统治也只限于自己所在的诺姆：因此，其实不是国王一个接一个地继承王位，而是有数个国王同时在不同地区进行统治。<sup><a href="#fn_10" id="reffn_10">10</a></sup>因此就有了这较大的总年数。但是，让我们抛开这个问题，仔细研究一下埃及历史的年表。</p>
+</li>
+</ol>
+<p>（续见7(b)）</p>
+<h2 id="2-（来自辛凯洛斯）"><a href="#2-（来自辛凯洛斯）" class="headerlink" title="2 （来自辛凯洛斯）"></a>2 （来自辛凯洛斯）</h2><p>此后<sup><a href="#fn_11" id="reffn_11">11</a></sup>，曼涅托还讲述了形成了三十个王朝的五个埃及部落，包括他所谓的神明、半神、亡灵和凡人。对于这些，尤西比乌斯，潘菲鲁斯之“子”，在他的《年代记》中这样描述道：“关于神明、半神、亡灵和凡人，埃及人有一长串愚蠢的神话。事实上，最古老的埃及国王宣称他们的年是由三十天组成的阴历年，而继承他们的半神则将三个月的长年命名为“霍洛伊”。所以尤西比乌斯写信责备埃及人说话愚妄，是很有道理的；而且在我看来，帕诺多鲁斯<sup><a href="#fn_12" id="reffn_12">12</a></sup>在这里因为尤西比乌斯没有解释历史学家的意思而指责尤西比乌斯是错误的，而帕诺多鲁斯自以为采用了一种稍显新颖的方法成功地解释了这一点，具体如下：</p>
+<p><strong>(施工中，敬请期待)</strong></p>
+<blockquote id="fn_1">
+<sup>1</sup>. 前王朝始于一群神明，包括“在孟斐斯受到崇拜的赫利奥波利斯大九柱神”(T·E·皮特，《剑桥古代史》I p250)。在汇总了1-3章后皮特补充道：“从历史的角度来说，这没什么可大惊小怪的。”关于埃及前王朝时期的传说，见迈耶《古代史》5,I.ii p102及后续。都灵纸草上诸神的顺序如下：(普塔)、拉、(舒)、盖布、奥西里斯、塞特(200年)、荷鲁斯(300年)、托特(3126年)、玛阿特、荷尔。见迈耶《亚历山大里亚编年史》6并参考片段3。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. 比迪斯(或比特斯)似乎是埃及语“国王”(bı͗ty)(来自“蜜蜂”bit)，下埃及国王的头衔：见巴勒莫石碑，并参见希罗多德，IV.155“利比亚人称他们的国王为‘巴托斯’”(P.E.纽贝里)。“bı͗ty”后期作为赫尔墨斯著作的翻译者或是解释者出现：见伊安布利库斯《神秘论》VIII.5(同斯科特《赫尔墨斯文集》IV p34)中先知“bı͗ty”[为国王阿蒙]翻译了一本书(《通往更高之道》，是一篇论文，关于关于达到与神结合的神秘的或是超自然的方法)，他在埃及塞易斯的一座神殿里发现了这本以象形文字雕刻着的著作。参见《伪曼涅托》附录。<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. 尚无证据表明埃及的一年曾经等于一个月：有短年(每年360天)和长年(见片段49)。<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_4">
+<sup>4</sup>. 见《野蛮人的拉丁文摘录》(片段4)中这个王朝的开始：“第一个，阿努比斯…”<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_5">
+<sup>5</sup>. 与都灵纸草第II列相互印证：“孟斐斯的”。<a href="#reffn_5" title="Jump back to footnote [5] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_6">
+<sup>6</sup>. “半神”应该是“亡灵”(νέκυες ἡμίθεοι)的同位语，同《野蛮人的拉丁文摘录》(片段4)和阿非利加努斯(片段6.1)。这些或许是谢姆苏·荷尔，都灵纸草上荷鲁斯的追随者或是崇拜者：见H·R·霍尔《剑桥古代史》，I p265。征服了肥沃的三角洲并建立了第一王朝的美尼斯(片段6)王之前，——谢姆苏·荷尔，隼鹰家族的成员们，他们的老家在在西三角洲，他们通过征服上埃及建立了一个更早的统一王国：见V·戈登·蔡尔德《古代近东新看法》1934，基于布雷斯特德《法兰西东方考古学会年报》XXX(开罗，1930),p10及之后和谢费尔在《东方文学杂志》(1932)的批评，p704。<a href="#reffn_6" title="Jump back to footnote [6] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_7">
+<sup>7</sup>. 上述各王朝统治年数之和确切为11,025年，下文的24,900也是24,925取整的结果。<a href="#reffn_7" title="Jump back to footnote [7] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_8">
+<sup>8</sup>. 博克《曼涅托与天狼星周期》，p85，将其修正为2046年。<a href="#reffn_8" title="Jump back to footnote [8] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_9">
+<sup>9</sup>. 梅斯特拉伊姆（Mestraïm）：旧约创世纪X.6中的米兹拉伊姆（Mizraïm）；阿拉伯语中的米斯伦（Miṣrun），楔形文字中的穆斯利（Muṣri），米斯里（Miṣri）。“Mizraïm”是一个双音节合成词，可能与埃及本土的两个主要区域——上、下埃及有关。<a href="#reffn_9" title="Jump back to footnote [9] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_*">
+<sup>*</sup>. “埃塞俄比亚”应该指努比亚地区（译者注）。<a href="#reffn_*" title="Jump back to footnote [*] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_10">
+<sup>10</sup>. 关于埃及当时存在的许多小王国，见皮安希石碑，布雷斯特《古代记录》，IV，§§ 830,878，并且阿尔塔帕努斯的文章《关于犹太人》，引用于p73 n.3. T·尼克林（在他的《埃及年表研究》，1928-29,p39）中说：“曼涅托的王朝并不是全埃及的统治者的名单，而一部分是或多或少独立的诸侯，一部分是后来涌现出来的统治全埃及的家族。（参考苏格兰斯图亚特王朝或是汉诺威选帝侯），有些仅仅是宫殿中的市长或是独立地位不稳定的小诸侯，甚至是更下级的诺姆长，然而，后来的君主就是从他们那里传下来的。（参考英格兰七王国）”<a href="#reffn_10" title="Jump back to footnote [10] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_11">
+<sup>11</sup>. 前见附录I，p210。<a href="#reffn_11" title="Jump back to footnote [11] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_12">
+<sup>12</sup>. 帕诺多鲁斯（395-408 A.D.）和他同时代的安尼亚努斯都是埃及僧侣，他们撰写年表的目的是使迦勒底人和埃及人的体系与犹太人的体系相互协调。帕诺多鲁斯运用了（也许编纂了）《索提斯之书》（附录IV）。<a href="#reffn_12" title="Jump back to footnote [12] in the text."> &#8617;</a>
+</blockquote>
+]]></content>
+      <categories>
+        <category>历史</category>
+        <category>古代史</category>
+        <category>埃及</category>
+        <category>1 早王朝(公元前3150-2705年)[第1-2王朝]</category>
+      </categories>
+      <tags>
+        <tag>渣翻</tag>
+        <tag>古埃及</tag>
+        <tag>史书</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>罗塞塔石碑:古希腊语部分翻译</title>
+    <url>/2024/06/20/rosetta-stone-translation-greek/</url>
+    <content><![CDATA[<p><img src="rosetta-stone.jpg" alt="罗塞塔石碑" title="罗塞塔石碑"></p>
+<ol>
+<li><p>继承了父亲王位的，年轻的，最光荣的，埃及的建立者，虔心</p>
+</li>
+<li><p>向着众神，敌人的战胜者，人们文明生活的恢复者，三十年庆典<sup><a href="#fn_1" id="reffn_1">1</a></sup>之主，如伟大的赫菲斯托斯<sup><a href="#fn_2" id="reffn_2">2</a></sup>一般，一个太阳<sup><a href="#fn_3" id="reffn_3">3</a></sup>般的国王，</p>
+</li>
+<li><p>上下埃及的大王<sup><a href="#fn_4" id="reffn_4">4</a></sup>，爱父神的后代，赫菲斯托斯认可的人之一，太阳赐予胜利的人，活生生的宙斯<sup><a href="#fn_5" id="reffn_5">5</a></sup>，太阳之子，永生的，受普塔眷恋的托勒密</p>
+</li>
+<li><p>的统治之下的第九年，阿埃托斯之子阿埃托斯为亚历山大、救主神、姐弟神、施惠神、爱父神<sup><a href="#fn_6" id="reffn_6">6</a></sup>与</p>
+</li>
+<li><p>神显者的祭司，菲利诺斯之女皮拉为贝勒尼基「施惠者」的阿特洛福罗斯<sup><a href="#fn_7" id="reffn_7">7</a></sup>，第欧根尼之女阿莉亚为阿尔西诺伊「爱姐弟者」的卡内弗罗斯<sup><a href="#fn_8" id="reffn_8">8</a></sup>，托勒密之女伊琳妮</p>
+</li>
+<li><p>为阿尔西诺伊「爱父者」的女祭司<sup><a href="#fn_9" id="reffn_9">9</a></sup>，在桑迪科斯月<sup><a href="#fn_10" id="reffn_10">10</a></sup>4日，据埃及历法为梅基尔月<sup><a href="#fn_11" id="reffn_11">11</a></sup>18日。谕旨。祭司长、先知和神殿内殿为</p>
+</li>
+<li><p>众神更衣者、持扇者、圣书吏和所有其他的自全国各地神殿来孟斐斯见国王的祭司皆聚集于此，参加永生的，</p>
+</li>
+<li><p>受普塔眷恋的，显赫的神显者，继承他父亲王位的托勒密安排的盛宴。他们这天齐聚在孟斐斯的神殿，一齐宣布：</p>
+</li>
+<li><p>鉴于永生的，受普塔眷恋的，显赫的神显者，「爱父神」托勒密国王与阿尔西诺伊女王之子，托勒密国王已成为神殿与</p>
+</li>
+<li><p>栖身神殿之人以及他的所有臣民的恩人，成为一对男神与女神结合而诞生的神(就像伊西斯与奥西里斯之子，为他父亲报仇雪恨的荷鲁斯)<sup><a href="#fn_12" id="reffn_12">12</a></sup>，(并且)仁慈地心向</p>
+</li>
+<li><p>神明，已将钱谷税收献给了神殿，并且承担了神殿的大量开支，以使埃及走向繁荣，建立新的神殿，</p>
+</li>
+<li><p>并且他毫不吝惜自己的所有金钱，在埃及征收的各种税款，有的被他完全免除，有的被他减轻，以便让所有人在他的统治下都能过得</p>
+</li>
+<li><p>欣欣向荣，埃及和王国其他地方的人欠国王许多债，却都被他免除了；那些坐牢的和控告很久的人，</p>
+</li>
+<li><p>却都被他释放了；他还指示道诸神将继续享受神殿的收入与每年给予他们的津贴，包括</p>
+</li>
+<li><p>谷物与金钱，同样地，他还指示诸神从葡萄园、菜园以及其他在他父亲时代属于诸神的财产中获得收入。</p>
+</li>
+<li><p>他又带着对祭司的尊重指示道，祭司们不需要再为了祭司职分像从他父亲统治期间直到他统治的第一年那样缴纳为他们安排的税款，他还使神职人员</p>
+</li>
+<li><p>不用每年都要赶到亚历山大里亚；他还指示不得再强征海军；并且神殿需向国王缴纳的亚麻布<sup><a href="#fn_13" id="reffn_13">13</a></sup>税也被他</p>
+</li>
+<li><p>免除了三分之二；他使得整个国家百废俱兴，注重以适当的方式向众神履行传统职责</p>
+</li>
+<li><p>同样地，他还公正地对待每一个人，就像是伟大的赫尔墨斯<sup><a href="#fn_14" id="reffn_14">14</a></sup>；他还规定了解甲归乡的战士，以及其他在动乱时期<sup><a href="#fn_15" id="reffn_15">15</a></sup></p>
+</li>
+<li><p>遭到苦难的人，允许他们在返乡时占有他们原先的财产；他下令派遣骑兵、步兵和战舰抵御那些从陆路和海路</p>
+</li>
+<li><p>入侵埃及的人，他还拨出了大量的金钱与粮食，以保证神殿和所有生活在这片土地上的人们的安全；还</p>
+</li>
+<li><p>去了布西里特省的利科波利斯，这座城被叛军占据，并抵挡住了我军的一轮围攻，叛军兵革坚利，物资充裕(因为聚集</p>
+</li>
+<li><p>在那里的不敬神明的人久已心怀不满，他们还多次毁坏神殿，伤害埃及的百姓)，并且</p>
+</li>
+<li><p>安营围攻这座城，还用土堆、壕沟和精心设计的堡垒将其包围；尼罗河在(他统治的)第八年泛滥时，这样通常会淹没</p>
+</li>
+<li><p>平原，但他通过在许多水道的泄洪点筑坝阻止了这样的惨剧的发生(在这上面花费了不少钱)，并且安排骑兵和步兵守卫</p>
+</li>
+<li><p>它们，他在很短的时间内像暴风一样攻占了这座城镇，消灭了城内所有不敬神明的人，就像赫尔墨斯和荷鲁斯——伊西斯和奥西里斯的儿子以前镇压这片地区的叛军<sup><a href="#fn_16" id="reffn_16">16</a></sup></p>
+</li>
+<li><p>一样，至于那些在他父亲时代纠集叛军、为非作歹、破坏神庙的人，国王亲赴孟斐斯为他的父亲和他自己的王位雪耻。</p>
+</li>
+<li><p>让他们所有人都得到了应得的惩罚，这时他来到这里举行了正式的加冕仪式；他还免除了</p>
+</li>
+<li><p>神殿直到他统治的第八年的赋税，一笔数量可观的谷物与金钱；还有未将亚麻布上交王室的</p>
+</li>
+<li><p>罚金以及那些以及需要上交给王室的布料，同时也免除了核查税收的费用；他还免除了神殿每一阿鲁拉<sup><a href="#fn_17" id="reffn_17">17</a></sup>的神圣土地的一阿塔贝<sup><a href="#fn_18" id="reffn_18">18</a></sup>的赋税，并且同样</p>
+</li>
+<li><p>免除了每阿鲁拉的葡萄园的一罐酒的赋税；他还将大量供品赠予阿比斯和姆奈维斯<sup><a href="#fn_19" id="reffn_19">19</a></sup>和埃及其他的神兽，因为他比历代先王对众神的东西考虑得都更加周到；</p>
+</li>
+<li><p>他还慷慨大方地为它们的葬礼提供了大量合适的用品，还定期向它们的专门的神龛捐款，并且举行了祭祀、节日和其他传统仪式；</p>
+</li>
+<li><p>并且他依据律法，维护着神殿和整个埃及的尊荣；他花费大量金银宝石将阿比斯的神殿</p>
+</li>
+<li><p>好好装饰了一番；他还建立了许多神殿、神龛和祭坛，并且修好了那些失修的，在宗教事务上展现出了一位慈爱的神明般的</p>
+</li>
+<li><p>精神；经询问，他还在他统治的期间重建了最华贵的神殿，这是十分得当的；作为回报，众神赐予他健康、胜利与力量，以及其他一切美好的事物，</p>
+</li>
+<li><p>并且他和他的子孙将永远保有王位。吉祥如意：这片土地上的所有神殿的每一位祭司都下定决心为永生的，受普塔眷恋的，「神显者」</p>
+</li>
+<li><p>如他父母「爱父神」、祖宗「施惠神」「姐弟神」「救主神」一般的国王托勒密增光添彩，</p>
+</li>
+<li><p>并在每座神殿最显眼的地方为永生的，受普塔眷恋的，「神显者」立一个塑像，</p>
+</li>
+<li><p>这个塑像将被称作「托勒密，埃及的守护者」，旁边立着神庙的主神，交给他胜利的武器<sup><a href="#fn_20" id="reffn_20">20</a></sup>，所有的一切都将以(埃及的)时尚的风格</p>
+</li>
+<li><p>进行制造；祭司们应当一天三次向神像致敬，给祂们穿上神圣的衣装，执行其他通常的圣事，比如在埃及的节日为其他神明献上</p>
+</li>
+<li><p>祭品；并为国王托勒密「神显者」，国王托勒密和阿尔西诺伊「爱父神」的后人，在每座</p>
+</li>
+<li><p>神殿里都建立一座雕像和一尊黄金神龛，并将它与其他神龛一起设置在内室中；盛大的节日中，游行的队伍会抬着神龛，「神显者」的神龛也和它们一起被抬着。</p>
+</li>
+<li><p>以示区分，国王的十个金冠要放在神龛上，其上还应加上一个蛇形<sup><a href="#fn_21" id="reffn_21">21</a></sup>标记，但不是</p>
+</li>
+<li><p>其他神龛上那样的蛇形冠冕，在它们的中心还要放上一顶红白双冠<sup><a href="#fn_22" id="reffn_22">22</a></sup>，这是他在孟斐斯神殿</p>
+</li>
+<li><p>举行登基大典时戴上的王冠;在王冠周围的正方形表面上，在前面所提到的王冠的旁边，金色的符号(用八个数字表示)，</p>
+</li>
+<li><p>这是让上下两国熠熠生辉的国王(的神龛)。因为梅索尔<sup><a href="#fn_23" id="reffn_23">23</a></sup>月30日是国王庆生的日子，相应的</p>
+</li>
+<li><p>(法奥菲<sup><a href="#fn_24" id="reffn_24">24</a></sup>月17日)是他继承他父亲王位的日子，所以他们在神殿中把这两天作为纪念日，因为它们是一切伟大幸事之源；又下旨全埃及的神殿都要保留在每个月的</p>
+</li>
+<li><p>这两天举行节日的的传统，在节日期间举行献祭和奠酒仪式，并照其他节日的惯例举行各类典礼(并且要将祭品交给神殿中)</p>
+</li>
+<li><p>供职的祭司。还将保留为永生的，受普塔眷恋的，「神显者」国王托勒密，每年在</p>
+</li>
+<li><p>这片土地上的所有神殿从托特<sup><a href="#fn_25" id="reffn_25">25</a></sup>月1日起举行为期五天的节日的传统，在这个节日，他们要带上花环，为神明献上与祭品和美酒并举行其他常规的活动，(每个神殿的)祭司</p>
+</li>
+<li><p>除了他们所侍奉的神明外还要被称为「神显者」的祭司；并且他的神职还要以这种形式登记在一切正式的文档里(并镌刻在他们所佩戴的指环上)；</p>
+</li>
+<li><p>也允许个人保留这一节日，在家中设立上述神明的神龛，每年举行上述庆祝</p>
+</li>
+<li><p>活动，以使埃及的众人知道赞美与崇敬「神显者」国王，依据法律如上。这谕旨要以圣书体[象形文字]和世俗体和希腊文刻在硬石碑</p>
+</li>
+<li><p>上，并且安放在第一、第二、第三[级]神殿的永生的国王的像旁。</p>
+</li>
+</ol>
+<blockquote id="fn_1">
+<sup>1</sup>. 赫卜赛德节在国王加冕三十年后每四年举行一次，以恢复国王的体力。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. 埃及语版本为普塔。<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. 埃及语版本为拉。<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_4">
+<sup>4</sup>. 埃及的南北部，两个伟大的前王朝时期的王国，作为国王的头衔用以纪念。<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_5">
+<sup>5</sup>. 古埃及语版本为阿蒙。<a href="#reffn_5" title="Jump back to footnote [5] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_6">
+<sup>6</sup>. 亚历山大「大帝」、托勒密一世、贝勒尼基一世、托勒密二世、阿尔西诺伊二世、托勒密三世、贝勒尼基二世、托勒密四世与阿尔西诺伊三世的敬称。<a href="#reffn_6" title="Jump back to footnote [6] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_7">
+<sup>7</sup>. Athlophoros，女祭司的头衔，意为持奖品者(译者注)。<a href="#reffn_7" title="Jump back to footnote [7] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_8">
+<sup>8</sup>. Kanephoros，意为持篮者(译者注)。<a href="#reffn_8" title="Jump back to footnote [8] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_9">
+<sup>9</sup>. 齐名的祭司；男女祭司，总是使用希腊名，是国王崇拜的重要组成部分，在他们的岗位上效力了一年后被安排在两个完全希腊式的学院中。<a href="#reffn_9" title="Jump back to footnote [9] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_10">
+<sup>10</sup>. Xandikos，古马其顿历法的六月，大致对应公历的三月(译者注)。<a href="#reffn_10" title="Jump back to footnote [10] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_11">
+<sup>11</sup>. Mekhir，古埃及历法的八月，大致对应公历的2月20日到3月21日(译者注)。<a href="#reffn_11" title="Jump back to footnote [11] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_12">
+<sup>12</sup>. 荷鲁斯，父亲的复仇者，在希腊被称为哈伦多特斯。<a href="#reffn_12" title="Jump back to footnote [12] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_13">
+<sup>13</sup>. 精细的亚麻布。<a href="#reffn_13" title="Jump back to footnote [13] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_14">
+<sup>14</sup>. 埃及语版本为托特。<a href="#reffn_14" title="Jump back to footnote [14] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_15">
+<sup>15</sup>. 指公元前205年以来，上埃及由两个反叛的本地法老控制的时期，第一个是霍-文内弗(先前被误读为霍-埃姆-阿赫特)，另一个是公元前199年开始统治的安赫-文内弗(被误读为安赫-埃姆-阿赫特)。<a href="#reffn_15" title="Jump back to footnote [15] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_16">
+<sup>16</sup>. 根据奥西里斯传说的一个版本，荷鲁斯和托特带领着两人的追随者在赫尔莫波利斯帕尔瓦击败了塞特的支持者。<a href="#reffn_16" title="Jump back to footnote [16] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_17">
+<sup>17</sup>. 土地计量单位，大致相当于2/3英亩(约2,735平方米)。<a href="#reffn_17" title="Jump back to footnote [17] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_18">
+<sup>18</sup>. 谷物计量单位，大致相当于38-40升(译者注)。<a href="#reffn_18" title="Jump back to footnote [18] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_19">
+<sup>19</sup>. 阿比斯和姆奈维斯都是古埃及多神崇拜中的圣牛(译者注)。<a href="#reffn_19" title="Jump back to footnote [19] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_20">
+<sup>20</sup>. 赫帕什(Khepesh)，亦称弯刀，常被描述为神明赐予国王的皇家武器。<a href="#reffn_20" title="Jump back to footnote [20] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_21">
+<sup>21</sup>. 眼镜蛇，王权的象征。<a href="#reffn_21" title="Jump back to footnote [21] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_22">
+<sup>22</sup>. 来源于埃及语Pa-sekhemty，双冠象征着上、下埃及的两部分王权，结合了下埃及的红冠和上埃及的白冠。<a href="#reffn_22" title="Jump back to footnote [22] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_23">
+<sup>23</sup>. Mesore，古埃及历法的十二月，大致对应公历的8月7日至9月5日(译者注)。 <a href="#reffn_23" title="Jump back to footnote [23] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_24">
+<sup>24</sup>. Paophi，古埃及历法的二月，大致对应公历的10月11日至11月9日(译者注)。<a href="#reffn_24" title="Jump back to footnote [24] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_25">
+<sup>25</sup>. Thoth，古埃及历法的一月，大致对应公历的8月29日至9月27日(译者注)。<a href="#reffn_25" title="Jump back to footnote [25] in the text."> &#8617;</a>
+</blockquote>
+]]></content>
+      <categories>
+        <category>历史</category>
+        <category>古代史</category>
+        <category>埃及</category>
+        <category>5 后王国时代(公元前1070-332年)[第21-31王朝]</category>
+      </categories>
+      <tags>
+        <tag>渣翻</tag>
+        <tag>古埃及</tag>
+        <tag>石碑</tag>
       </tags>
   </entry>
 </search>
