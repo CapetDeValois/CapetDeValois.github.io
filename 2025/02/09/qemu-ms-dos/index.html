@@ -21,18 +21,24 @@
     var CONFIG = {"hostname":"hiedanoajuu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="见过一次的东西就不会再忘记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="稗田阿柔">
-<meta property="og:url" content="https://hiedanoajuu.github.io/tags/%E6%96%87%E5%8C%96/index.html">
+  <meta name="description" content="QEMU MS-DOS系统安装及Masm开发环境配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QEMU MS-DOS环境配置">
+<meta property="og:url" content="https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/index.html">
 <meta property="og:site_name" content="稗田阿柔">
-<meta property="og:description" content="见过一次的东西就不会再忘记">
+<meta property="og:description" content="QEMU MS-DOS系统安装及Masm开发环境配置">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/dos-floppy.png">
+<meta property="og:image" content="https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/dos-shell.png">
+<meta property="article:published_time" content="2025-02-09T06:44:34.000Z">
+<meta property="article:modified_time" content="2025-02-09T09:11:30.946Z">
 <meta property="article:author" content="稗田阿柔">
-<meta property="article:tag" content="幻想乡的记忆">
+<meta property="article:tag" content="计算机">
+<meta property="article:tag" content="折腾">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/dos-floppy.png">
 
-<link rel="canonical" href="https://hiedanoajuu.github.io/tags/%E6%96%87%E5%8C%96/">
+<link rel="canonical" href="https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/">
 
 
 <script id="page-configurations">
@@ -40,12 +46,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 文化 | 稗田阿柔</title>
+  <title>QEMU MS-DOS环境配置 | 稗田阿柔</title>
   
 
 
@@ -185,51 +191,175 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">文化
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="稗田阿柔">
+      <meta itemprop="description" content="见过一次的东西就不会再忘记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="稗田阿柔">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          QEMU MS-DOS环境配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-02-09 14:44:34 / 修改时间：17:11:30" itemprop="dateCreated datePublished" datetime="2025-02-09T14:44:34+08:00">2025-02-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">汇编语言</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/Masm/" itemprop="url" rel="index"><span itemprop="name">Masm</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>787</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+            <div class="post-description">QEMU MS-DOS系统安装及Masm开发环境配置</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-08-10T12:27:00+08:00"
-              content="2024-08-10">
-          08-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/08/10/hiragana-in-chinese/" itemprop="url">
-            <span itemprop="name">平假名寻根——草书书法中的“平假名”</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>也是学到了Masm中运用<code>int 13h</code>对软盘进行读写这一部分了。不过，DOSBox虽然支持挂载虚拟软驱，但并不支持软盘启动。对此，还是决定把Masm开发环境迁移到<strong>QEMU</strong>虚拟机上。</p>
+<h1 id="安装QEMU"><a href="#安装QEMU" class="headerlink" title="安装QEMU"></a>安装QEMU</h1><p>在笔者使用的Arch Linux上使用<code>pacman</code>安装<code>qemu</code>尤为方便，只需要:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S qemu-full</span><br></pre></td></tr></table></figure></p>
+<p>接下来，我们为虚拟机创建一个硬盘镜像，<code>500MB</code>的应该就足够了:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qemu-img create -f qcow2 /path/to/c.img 500M</span><br><span class="line"><span class="comment"># /path/to/* 替换成自己的路径，下同</span></span><br></pre></td></tr></table></figure></p>
+<p>随后，到这个这个网站<a target="_blank" rel="noopener" href="https://winworldpc.com/product/ms-dos/50">https://winworldpc.com/product/ms-dos/50</a>下载MS-DOS 5.0的镜像，这里我选择的是单软盘的版本。</p>
+<p>用QEMU载入前面创建的硬盘镜像和下载的软盘镜像:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-i386 -m 32M -hda c.img -fda ms-dos-floppy.img -boot a</span><br></pre></td></tr></table></figure><br>这里我们指定内存为<code>32MB</code>，前面创建的硬盘镜像<code>c.img</code>为C盘，下载的MS-DOS软盘镜像<code>ms-dos-floppy.img</code>为A盘，并以A盘作为启动盘，各参数可以根据实际自行调整。</p>
+<p><img src="dos-floppy.png" alt="MS-DOS安装" title="MS-DOS安装"><br>于是我们就进入了安装MS-DOS的界面了，过程没什么好说的，提供的英文指示也非常通俗易懂。</p>
+<p><img src="dos-shell.png" alt="MS-DOS Shell" title="MS-DOS Shell"><br>安装完成后重启，如果进入了这个<code>MS-DOS Shell</code>就说明安装成功了。</p>
+<h1 id="配置开发环境"><a href="#配置开发环境" class="headerlink" title="配置开发环境"></a>配置开发环境</h1><p>首先这个<code>MS-DOS Shell</code>没什么大用。先退出，然后到根目录下的自启动脚本<code>autoexec.bat</code>把它拿掉即可。<br>接下来，我们把Masm的开发环境全部迁移过来。<br>先回到<code>DOSBox</code>，在其中新建一个<code>a.img</code>的软盘镜像:<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imgmake a.img -t floppy</span><br></pre></td></tr></table></figure><br>接着，挂载这个镜像到A盘:<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imgmount A a.img -t floppy</span><br></pre></td></tr></table></figure><br>随后把开发环境的文件全都<code>copy</code>到A盘。<br>然后启动QEMU，并把<code>a.img</code>挂载为QEMU的A盘:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-i386 -m 32M -hda c.img -fda a.img -boot c</span><br></pre></td></tr></table></figure><br>再把A盘里的文件<code>copy</code>到C盘，并在<code>autoexec.bat</code>配置一下环境变量，即可。</p>
+<h1 id="DOSBox"><a href="#DOSBox" class="headerlink" title="DOSBox"></a>DOSBox</h1><p>至此，我们已经正式完成了开发环境由DOSBox到QEMU的转移。不过，也没必要把物理机上的DOSBox删掉。我们可以利用DOSBox在物理机上读写<code>a.img</code>，从而实现物理机与QEMU虚拟机的交互与文件传递。具体的操作上面也已经演示过了，不再赘述。</p>
 
     </div>
+
+    
+    
+    
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">~~~~~~~~~~~~~~ 本文已结束 <i class="fa fa-paw"></i> 感谢您的阅读 ~~~~~~~~~~~~~~</div>
+    
+</div>
+      </div>
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="稗田阿柔 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="稗田阿柔 支付宝">
+        <p>支付宝</p>
+      </div>
+
   </div>
-  
-  
-  
+</div>
 
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>稗田阿柔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/" title="QEMU MS-DOS环境配置">https://hiedanoajuu.github.io/2025/02/09/qemu-ms-dos/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 计算机</a>
+              <a href="/tags/%E6%8A%98%E8%85%BE/" rel="tag"><i class="fa fa-tag"></i> 折腾</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/02/04/int9/" rel="prev" title="编写int 9中断例程">
+      <i class="fa fa-chevron-left"></i> 编写int 9中断例程
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -283,6 +413,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85QEMU"><span class="nav-number">2.</span> <span class="nav-text">安装QEMU</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">配置开发环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DOSBox"><span class="nav-number">4.</span> <span class="nav-text">DOSBox</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
